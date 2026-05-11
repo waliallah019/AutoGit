@@ -1,0 +1,16 @@
+langchain-core>=0.3.0
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-groq>=0.2.0
+python-dotenv>=1.0.1
+reportlab>=4.2.0
+pandas>=2.2.0
+sentence-transformers>=3.0.0
+openpyxl>=3.1.0
+neo4j
+tree-sitter
+tree-sitter-languages
+fastapi
+uvicorn
+motor
+PyJWT
