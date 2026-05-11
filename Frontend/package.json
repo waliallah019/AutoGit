@@ -1,0 +1,56 @@
+{
+  "name": "autogit",
+  "displayName": "AutoGit",
+  "description": "Copilot-style chat sidebar for the AutoGit backend.",
+  "version": "0.1.0",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:autogit.chatView",
+    "onCommand:autogit.openChat",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "autogit.openChat",
+        "title": "AutoGit: Open Chat"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "autogit",
+          "title": "AutoGit",
+          "icon": "media/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "autogit": [
+        {
+          "id": "autogit.chatView",
+          "name": "AutoGit Chat",
+          "type": "webview"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "echo \"No lint configured\""
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.0.0"
+  }
+}
